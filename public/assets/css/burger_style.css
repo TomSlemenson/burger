@@ -1,0 +1,17 @@
+body{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+li{
+    font-size:25px;
+    list-style: none;
+}
+
+ul{
+    padding: 0px;
+}
+
+label{
+    font-size:20px;
+}
+

@@ -1,0 +1,64 @@
+<div class="card mb-4 mt-4">
+    <h1 class="text-center m-4 text-dark"><i class="fas fa-hamburger"> EAT DA BURGER!</i></h1>
+</div>
+
+<div class="row mb-4">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body border border-dark">
+                <h3 class="card-title">Add A BURGER</h3>
+                <form class="create-form">
+
+                    <div class="form-group">
+                        <label for="ca">Burger Name:</label>
+                        <input class="border border-dark" type="text" id="ca" name="burger_name">
+                    </div>
+
+                    <button type="submit" class="btn btn-danger btn-lg">Add Burger</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-sm-6 mb-4">
+        <div class="card">
+            <div class="card-body border border-dark">
+                <h3 class="card-title">YOUR BURGERS!</h3>
+
+                <ul>
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    <div class="m-2 p-2">
+                    <li>{{burger_name}}
+                        <button class="change btn btn-danger" data-id="{{id}}">EAT!</button>
+                    </li>
+                    </div>
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body border border-dark">
+                <h3 class="card-title">BURGERS GONE</h3>
+                <ul>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <li class="card m-2 p-2 border border-dark">{{burger_name}}</li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
